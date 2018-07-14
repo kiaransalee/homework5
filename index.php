@@ -26,15 +26,15 @@ if (file_exists($filename) and !empty($filename)) {
 
     <?php
     if (!empty ($jsonInfo)) {
-        foreach ($jsonInfo as $key => $jInfo) {
+        foreach ($jsonInfo as $jInfo) {
             echo '<tr>';
-            $firstName = (!empty ($jsonInfo[$key]['firstName'])) ? $jInfo['firstName'] : '-';
+            $firstName = !empty($jInfo['firstName']) ? $jInfo['firstName'] : '-';
             echo '<td>' . $firstName . '</td>';
-            $lastName = (!empty ($jsonInfo[$key]['lastName'])) ? $jInfo['lastName'] : '-';
+            $lastName = !empty($jInfo['lastName']) ? $jInfo['lastName'] : '-';
             echo '<td>' . $lastName . '</td>';
-            $address = (!empty ($jsonInfo[$key]['address'])) ? $jInfo['address'] : '-';
+            $address = !empty($jInfo['address']) ? $jInfo['address'] : '-';
             echo '<td>' . $address . '</td>';
-            $phoneNumber = (!empty ($jsonInfo[$key]['phoneNumber'])) ? $jInfo['phoneNumber'] : '-';
+            $phoneNumber = !empty($jInfo['phoneNumber']) ? $jInfo['phoneNumber'] : '-';
             echo '<td>' . $phoneNumber . '</td>';
             echo '</tr>';
         }
