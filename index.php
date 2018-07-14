@@ -1,15 +1,15 @@
 <?php
 
-//назначаем переменные
+//РЅР°Р·РЅР°С‡Р°РµРј РїРµСЂРµРјРµРЅРЅС‹Рµ
 $filename = "addressbook.json";
 $jsonInfo = [];
 
-//читаем данные с файла, сохраняем в массив
+//С‡РёС‚Р°РµРј РґР°РЅРЅС‹Рµ СЃ С„Р°Р№Р»Р°, СЃРѕС…СЂР°РЅСЏРµРј РІ РјР°СЃСЃРёРІ
 if (file_exists($filename) and !empty($filename)) {
     $data = file_get_contents($filename);
-    $jsonInfo = json_decode($data, true) or exit('Ошибка декодирования json');
+    $jsonInfo = json_decode($data, true) or exit('РћС€РёР±РєР° РґРµРєРѕРґРёСЂРѕРІР°РЅРёСЏ json');
 } else {
-    echo 'Файл недоступен или не существует.';
+    echo 'Р¤Р°Р№Р» РЅРµРґРѕСЃС‚СѓРїРµРЅ РёР»Рё РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚.';
 }
 
 ?>
@@ -19,7 +19,7 @@ if (file_exists($filename) and !empty($filename)) {
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Домашняя работа</title>
+    <title>Р”РѕРјР°С€РЅСЏСЏ СЂР°Р±РѕС‚Р°</title>
 </head>
 <body>
 <table border="1" padding="1">
@@ -39,7 +39,7 @@ if (file_exists($filename) and !empty($filename)) {
             echo '</tr>';
         }
     } else {
-        echo 'Данные не были получены.';
+        echo 'Р”Р°РЅРЅС‹Рµ РЅРµ Р±С‹Р»Рё РїРѕР»СѓС‡РµРЅС‹.';
     }
     ?>
 </table>
